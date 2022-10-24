@@ -1,0 +1,59 @@
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ mkdir
+mkdir: missing operand
+Try 'mkdir --help' for more information.
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ mkdir newrepo
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ cd newrepo
+
+krish@DESKTOP-31OHB26 MINGW64 ~/newrepo
+$ git init
+Initialized empty Git repository in C:/Users/krish/newrepo/.git/
+
+krish@DESKTOP-31OHB26 MINGW64 ~/newrepo (master)
+$ vim ari.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/newrepo (master)
+$ git@github.com:Max-akash/newrepo.git
+bash: git@github.com:Max-akash/newrepo.git: No such file or directory
+
+krish@DESKTOP-31OHB26 MINGW64 ~/newrepo (master)
+$ cd ..
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ git@github.com:Max-akash/newrepo.git
+bash: git@github.com:Max-akash/newrepo.git: No such file or directory
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ git clone git@github.com:Max-akash/newrepo.git
+fatal: destination path 'newrepo' already exists and is not an empty directory.
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ git clone git@github.com:Max-akash/newrepo.git
+Cloning into 'newrepo'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 9 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (9/9), done.
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ cat ari.txt
+cat: ari.txt: No such file or directory
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ cd newrepo
+
+krish@DESKTOP-31OHB26 MINGW64 ~/newrepo (main)
+$ cat ari.txt
+a = 10
+b = 20
+print(a+b)
+print(a-b)
+print(a*b)
+
+krish@DESKTOP-31OHB26 MINGW64 ~/newrepo (main)

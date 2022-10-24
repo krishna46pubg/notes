@@ -1,0 +1,219 @@
+
+krish@DESKTOP-31OHB26 MINGW64 ~/newrepo (main)
+$ git branch
+* main
+
+krish@DESKTOP-31OHB26 MINGW64 ~/newrepo (main)
+$ git branch branch1
+
+krish@DESKTOP-31OHB26 MINGW64 ~/newrepo (main)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+krish@DESKTOP-31OHB26 MINGW64 ~/newrepo (branch1)
+$ cd ..
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ cd miniproject
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git checkout branch1
+error: pathspec 'branch1' did not match any file(s) known to git
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git checkout branch1
+error: pathspec 'branch1' did not match any file(s) known to git
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git branch branch1
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ ls
+1.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ vim 1.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ git status
+On branch branch1
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ git add 1.txt
+warning: in the working copy of '1.txt', LF will be replaced by CRLF the next time Git touches it
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ git commit -m "fourth commit from branch1"
+[branch1 edc72ff] fourth commit from branch1
+ 1 file changed, 1 insertion(+)
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ vim 1.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git log
+commit a88e6fa77871c22b6c12c60f9809fa9ae1e198c0 (HEAD -> main, origin/main)
+Author: Max-akash <rgr22988@gmail.com>
+Date:   Wed Oct 19 21:04:47 2022 +0530
+
+    updated to third commit
+
+commit 872bbf09dbdddab5331fe020aa5109f25d3c27e4
+Author: Max-akash <rgr22988@gmail.com>
+Date:   Wed Oct 19 21:03:36 2022 +0530
+
+    updated to second commit
+
+commit 80db2362d2cae1bd82caad8958785948439fe748
+Author: Max-akash <rgr22988@gmail.com>
+Date:   Wed Oct 19 20:59:17 2022 +0530
+
+    commit
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git merge branch1
+error: Your local changes to the following files would be overwritten by merge:
+        1.txt
+Please commit your changes or stash them before you merge.
+Aborting
+Updating a88e6fa..edc72ff
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git chockout branch1
+git: 'chockout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git checkout branch1
+error: Your local changes to the following files would be overwritten by checkout:
+        1.txt
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git add 1.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git commit -m "fourth commit from main"
+[main 0a7dcce] fourth commit from main
+ 1 file changed, 1 insertion(+)
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 296 bytes | 296.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Max-akash/miniproject.git
+   a88e6fa..0a7dcce  main -> main
+branch 'main' set up to track 'origin/main'.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git checkout branch1
+Switched to branch 'branch1'
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ git status
+On branch branch1
+nothing to commit, working tree clean
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ git merge main
+Auto-merging 1.txt
+CONFLICT (content): Merge conflict in 1.txt
+Automatic merge failed; fix conflicts and then commit the result.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1|MERGING)
+$ git chocket main
+git: 'chocket' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1|MERGING)
+$ git merge branch1
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1|MERGING)
+$ git merge main
+error: Merging is not possible because you have unmerged files.
+hint: Fix them up in the work tree, and then use 'git add/rm <file>'
+hint: as appropriate to mark resolution and make a commit.
+fatal: Exiting because of an unresolved conflict.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1|MERGING)
+$ git status
+On branch branch1
+You have unmerged paths.
+  (fix conflicts and run "git commit")
+  (use "git merge --abort" to abort the merge)
+
+Unmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1|MERGING)
+$ git add 1.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1|MERGING)
+$ git commit -m "mergred"
+[branch1 e788335] mergred
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$ git status
+On branch branch1
+nothing to commit, working tree clean
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (branch1)
+$

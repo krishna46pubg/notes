@@ -1,0 +1,236 @@
+
+krish@DESKTOP-31OHB26 MINGW64 ~/pydatabase (main)
+$ git --global user.name "Max-akash"
+unknown option: --global
+usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+krish@DESKTOP-31OHB26 MINGW64 ~/pydatabase (main)
+$ git config --global user.name "Max-akash"
+
+krish@DESKTOP-31OHB26 MINGW64 ~/pydatabase (main)
+$ git config --global user.email rgr22988@gmail.com"
+>
+bash: unexpected EOF while looking for matching `"'
+bash: syntax error: unexpected end of file
+
+krish@DESKTOP-31OHB26 MINGW64 ~/pydatabase (main)
+$ git config --global user.email "rgr22988@gmail.com"
+
+krish@DESKTOP-31OHB26 MINGW64 ~/pydatabase (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+krish@DESKTOP-31OHB26 MINGW64 ~/pydatabase (main)
+$ ls
+46.txt  python.ipynb  readme.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/pydatabase (main)
+$ git add python.ipynb
+
+krish@DESKTOP-31OHB26 MINGW64 ~/pydatabase (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+krish@DESKTOP-31OHB26 MINGW64 ~/pydatabase (main)
+$ cd ..
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ git config --global user.name "Max-akash"
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ git config --global user.email rgr22988@gmail.com"
+>
+bash: unexpected EOF while looking for matching `"'
+bash: syntax error: unexpected end of file
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ git config --global user.email "rgr22988@gmail.com"
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ cat ~/.gitconfig
+[user]
+        name = Max-akash
+        email = rgr22988@gmail.com
+
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ cd py.database
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database
+$ git init
+Initialized empty Git repository in C:/Users/krish/py.database/.git/
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ ls
+python.ipynb
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ ls -a
+./  ../  .git/  python.ipynb
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ gti status
+bash: gti: command not found
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        python.ipynb
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ git add python.ipynb
+warning: in the working copy of 'python.ipynb', LF will be replaced by CRLF the next time Git touches it
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ git commit -m "py code"
+[master (root-commit) b59c924] py code
+ 1 file changed, 365 insertions(+)
+ create mode 100644 python.ipynb
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ git log
+commit b59c924b06c36da8fa098915ac37c2debbf94df3 (HEAD -> master)
+Author: Max-akash <rgr22988@gmail.com>
+Date:   Wed Oct 19 20:43:12 2022 +0530
+
+    py code
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ ssh-keygen -o
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/krish/.ssh/id_rsa):
+/c/Users/krish/.ssh/id_rsa already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/Users/krish/.ssh/id_rsa
+Your public key has been saved in /c/Users/krish/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:X8sB7vNnVsriXbJe5cIVEB7wQuge++Xq/KMd/MsLAgo krish@DESKTOP-31OHB26
+The key's randomart image is:
++---[RSA 3072]----+
+|          .o.+.  |
+|         .. o o  |
+|        . .. o . |
+|         + ..   .|
+|     E  S.+ o   o|
+|      . .=.o.= oo|
+|       .  =.==+o+|
+|          .+++@* |
+|          .**O==o|
++----[SHA256]-----+
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCr+v22fBE/VSh9sZwQZeEmQQMLc1bidfYrpUOecrVJMeLdRN+MJOvy6XEMwzoQ+BrEgeAMJySU8COXuTXyJWtvEyfWIutKVV/j+/b/P3K7eDqlIEbUrf0JspwWBI93VRd1R2feOT+An1hC+NNpnGW1zpfA8kOEnb7ELmbDWcdHAIOin1mVM3C8Iy86eXRnPl8WWzXYyFUCDNY7cDhtqhav7k7npUTnl2i8M5XBchDZTNrqcc9Gy+eFplZs2t3nGbr7JK0iW3G6oCkHJ03QsnZNP4kmodccwjbK5xzQIv2pIYKanfJIwaUAuy6GAcU+8+2vb+42a5811/46kUiw3gN32FuF54N/s= krish@DESKTOP-31OHB26
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCr+v22fBE/VSh9sZwQZeEmQQMLc1bidfYrpUOecrVJMeLdRN+MJOvy6XEMwzoQ+BrEgeAMJySU8COXuTXyJWtvEyfWIutKVV/j+/b/P3K7eDqlIEbUrf0JspwWBI93VRd1R2feOT+An1hC+NNpnGW1zpxnSB0Dt46ijm9bn1JPYJlxDM7DqA9+haYMGDR0B+qHILjZo5UI7Xk8twVQb4dY0RnJyUS974ftrckaeADfA8kOEnb7ELmbDWcdHAIOin1mVM3C8Iy86eXRnPl8WWzXYyFUCDNY7cDhtqhav7k7npUTnl2i8M5XBchDZTNrqcc9Gy+eFplZs2t3nGbr7JK0iW3G6oCkHJ03QsnZNP4kmodccwjbK5xzQIv2pIYKanfJIwaUAuy6GAcU+8+2vb+42a5811/46kUiw3gN3ZMoo1P5q1aUKmGGtm1+5B78yehBicXe2nedTn6hKmmS5m5ODwFvdiCZVV9OiWlnQ/njg7tTSIg8C/qpGx2FuF54N/s= krish@DESKTOP-31OHB26
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ git remote add origin git@github.com:Max-akash/py.database.git
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (master)
+$ git branch -M main
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ git branch -M main
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ git push -u origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.56 KiB | 1.56 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Max-akash/py.database.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ vim readme.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        readme.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ git add readme.txt
+warning: in the working copy of 'readme.txt', LF will be replaced by CRLF the next time Git touches it
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ git commit -m "Readme file"
+[main 196bca8] Readme file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 readme.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 300 bytes | 300.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Max-akash/py.database.git
+   b59c924..196bca8  main -> main
+branch 'main' set up to track 'origin/main'.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ vim 1.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ git add 1.txt
+warning: in the working copy of '1.txt', LF will be replaced by CRLF the next time Git touches it
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ git commit -m "Empty Folder"
+[main 4437f9e] Empty Folder
+ 1 file changed, 1 insertion(+)
+ create mode 100644 1.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$ git push -u origin main
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Max-akash/py.database.git
+   196bca8..4437f9e  main -> main
+branch 'main' set up to track 'origin/main'.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/py.database (main)
+$

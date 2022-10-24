@@ -1,0 +1,65 @@
+krish@DESKTOP-31OHB26 MINGW64 ~
+$ cd miniproject
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git push -u origin main
+Everything up-to-date
+branch 'main' set up to track 'origin/main'.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ vim 1.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   1.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git add 1.txt
+warning: in the working copy of '1.txt', LF will be replaced by CRLF the next time Git touches it
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git commit -m "updated to second commit"
+[main 872bbf0] updated to second commit
+ 1 file changed, 1 insertion(+)
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 276 bytes | 276.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Max-akash/miniproject.git
+   80db236..872bbf0  main -> main
+branch 'main' set up to track 'origin/main'.
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ vim 1.txt
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git add 1.txt
+warning: in the working copy of '1.txt', LF will be replaced by CRLF the next time Git touches it
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git commit -m "updated to third commit"
+[main a88e6fa] updated to third commit
+ 1 file changed, 1 insertion(+)
+
+krish@DESKTOP-31OHB26 MINGW64 ~/miniproject (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 281 bytes | 281.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:Max-akash/miniproject.git
+   872bbf0..a88e6fa  main -> main
+branch 'main' set up to track 'origin/main'.
